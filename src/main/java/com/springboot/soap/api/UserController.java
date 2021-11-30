@@ -23,6 +23,11 @@ public class UserController {
 	
 	@Autowired
 	private RestTemplate restTemplate;
+	
+	@GetMapping("/")
+	public String getHelloWorld(){
+		return "Hello User";
+	}
 
 	@GetMapping("/{userId}")
 	public User getUser(@PathVariable("userId") Long userId) {
