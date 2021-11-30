@@ -29,7 +29,7 @@ public class UserController {
 		
 		User user = userService.getUser(userId);
 		
-		List contacts = restTemplate.getForObject("http://contact-service/contact/user/"+user.getUserId(), List.class);
+		List contacts = restTemplate.getForObject("http://contact-service-git-akshaykemekar-stage.apps.sandbox.x8i5.p1.openshiftapps.com/contact/user/"+user.getUserId(), List.class);
 		
 		user.setContacts((java.util.List<Contact>) contacts);
 		
